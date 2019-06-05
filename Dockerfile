@@ -11,9 +11,3 @@ RUN export SERVICES=sqs
 ADD receive.py receive.py
 
 ADD send.py send.py
-
-RUN python3 send.py
-
-ENTRYPOINT python3
-
-CMD ["receive.py", "A", "B"]

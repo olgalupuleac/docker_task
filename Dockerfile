@@ -1,10 +1,8 @@
-FROM ubuntu
+FROM python:3.7
 
 MAINTAINER olgalupuleac_sashaorlova
 
-RUN apt-get update &&  apt-get install -y python3.6
-
-RUN apt-get update &&  apt-get install -y python3-pip && pip3 install localstack
+RUN apt-get update &&  apt-get install -y python3-pip && pip3 install boto3
 
 RUN export SERVICES=sqs
 
